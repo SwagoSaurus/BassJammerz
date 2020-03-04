@@ -11,7 +11,16 @@ public class NoteChecker : MonoBehaviour
     bool active = false;
     public GameObject ScoreScript;
     ScoreScript Script;
-    float score = 30;
+    [SerializeField]
+    float score;
+    [SerializeField]
+    float combo = 1;
+
+    public bool CreateMode;
+    public GameObject N;
+   
+    [SerializeField]
+    float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +30,54 @@ public class NoteChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(key) && active)
+        if (CreateMode)
         {
-
-            Script.IncreaseScore(score);
-            Destroy(note);
+            if(Input.GetKeyDown(key))
+            {
+                Instantiate(N, transform.position, Quaternion.identity);
+            }
         }
-        DistanceChild = note.transform.GetChild(0).transform;
+
+        else
+        {
+            if (Input.GetKeyDown(key) && active)
+            {
+                distance = Vector3.Distance(DistanceChild.position, transform.position);
+
+                if (distance >= 0.5)
+                {
+                    score = 30;
+                }
+                else if (distance < 0.5 && distance >= 0.25)
+                {
+                    score = 60;
+                }
+                else if (distance < 0.25)
+                {
+                    score = 90;
+                }
+
+                Script.ComboCounter += 1;
+                combo = Script.Combo;
+                Script.IncreaseScore(score, combo);
+                Destroy(note);
+                active = false;
+
+            }
+        }
+       
+        
     }
 
     private void OnTriggerEnter(Collider col)
     {
         active = true;
+        DistanceChild = col.transform.GetChild(0).transform;
+        
         if (col.gameObject.tag == "Note")
         {
             note = col.gameObject;
+            
         }
     }
 
@@ -43,4 +85,6 @@ public class NoteChecker : MonoBehaviour
     {
         active = false;
     }
+
+    
 }
