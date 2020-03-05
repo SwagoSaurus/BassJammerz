@@ -60,9 +60,15 @@ public class NoteChecker : MonoBehaviour
                 Script.ComboCounter += 1;
                 combo = Script.Combo;
                 Script.IncreaseScore(score, combo);
+                Script.IncreaseStreak();
                 Destroy(note);
                 active = false;
 
+            }
+            else if(Input.GetKeyDown(key) && !active)
+            {
+                Script.ResetCombo();
+                Script.ResetStreak();
             }
         }
        
