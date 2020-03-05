@@ -26,6 +26,7 @@ public class DeathScript : MonoBehaviour
         if (col.gameObject.tag == "Note")
         {
             Script.ResetCombo();
+            Script.ResetStreak();
             Destroy(col.gameObject);
         }
     }
