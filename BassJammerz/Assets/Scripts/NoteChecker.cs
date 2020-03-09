@@ -10,7 +10,9 @@ public class NoteChecker : MonoBehaviour
     Transform DistanceChild;
     bool active = false;
     public GameObject ScoreScript;
+    public GameObject MeterScript;
     ScoreScript Script;
+    MeterScript meterScript;
     [SerializeField]
     float score;
     [SerializeField]
@@ -25,6 +27,7 @@ public class NoteChecker : MonoBehaviour
     void Start()
     {
         Script = ScoreScript.GetComponent<ScoreScript>();
+        meterScript = MeterScript.GetComponent<MeterScript>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class NoteChecker : MonoBehaviour
     {
         if (CreateMode)
         {
+            meterScript.Invincible = true;
             if(Input.GetKeyDown(key))
             {
                 Instantiate(N, transform.position, Quaternion.identity);
@@ -40,7 +44,7 @@ public class NoteChecker : MonoBehaviour
 
         else
         {
-            if (Input.GetKeyDown(key) && active)
+            if (Input.GetKeyDown(key) && active && meterScript.Invincible == false)
             {
                 distance = Vector3.Distance(DistanceChild.position, transform.position);
 
@@ -61,6 +65,7 @@ public class NoteChecker : MonoBehaviour
                 combo = Script.Combo;
                 Script.IncreaseScore(score, combo);
                 Script.IncreaseStreak();
+                meterScript.IncreaseRockMeter();
                 Destroy(note);
                 active = false;
 
@@ -69,6 +74,7 @@ public class NoteChecker : MonoBehaviour
             {
                 Script.ResetCombo();
                 Script.ResetStreak();
+                meterScript.DecreaseRockMeter();
             }
         }
        

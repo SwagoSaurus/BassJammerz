@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathScript : MonoBehaviour
+public class WinScript : MonoBehaviour
 {
     public GameObject ScoreScript;
     public GameObject MeterScript;
@@ -19,24 +19,11 @@ public class DeathScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider col)
-    {
-       
-
-        if (col.gameObject.tag == "Note")
+        if(meterScript.Won == true)
         {
-            Script.ResetCombo();
-            Script.ResetStreak();
-            meterScript.DecreaseRockMeter();
-            Destroy(col.gameObject);
+
         }
 
-        else if(col.gameObject.tag == "WinNote")
-        {
-            meterScript.Win();
-        }
     }
+
 }

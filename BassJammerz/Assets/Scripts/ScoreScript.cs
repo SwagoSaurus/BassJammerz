@@ -10,6 +10,7 @@ public class ScoreScript : MonoBehaviour
     public float ComboCounter = 0;
     public float Streak;
     public float AddScore;
+ 
     private TextMeshProUGUI textMesh;
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class ScoreScript : MonoBehaviour
     {
         Streak += 1;
     }
+    
 
     
 }
