@@ -7,17 +7,22 @@ public class TestProjectile : MonoBehaviour
     Rigidbody rb;
     Vector3 direction;
     public float speed;
-    
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        speed = speed / 60;
+       rb.velocity = new Vector3(speed * 4, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+       // transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
     }
 }
