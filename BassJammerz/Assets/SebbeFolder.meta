@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:BassJammerz/Assets/SebbeFolder.meta
 guid: c8832a70db7480644a2c54232b30dec1
 folderAsset: yes
 DefaultImporter:
+=======
+guid: 349c5d6820a7bd449a936a6ec471a6d3
+PrefabImporter:
+>>>>>>> 29381e474bf5dde3206daa5c16cd5836e4865ce1:BassJammerz/Assets/IsakFolder/Prefabs/Högerpil.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
