@@ -23,6 +23,9 @@ public class NoteChecker : MonoBehaviour
    
     [SerializeField]
     float distance;
+
+    Vector3 Childpos;
+    Vector3 Checkpos;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +49,10 @@ public class NoteChecker : MonoBehaviour
         {
             if (Input.GetKeyDown(key) && active && meterScript.Invincible == false)
             {
-                distance = Vector3.Distance(DistanceChild.position, transform.position);
+                Childpos = new Vector3(transform.position.x, 0.64f, transform.position.z);
+                Checkpos = new Vector3(DistanceChild.position.x, 0.64f, DistanceChild.position.z);
+                distance = Vector3.Distance(Childpos, Checkpos);
+                
 
                 if (distance >= 0.5)
                 {

@@ -21,9 +21,9 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ComboCounter == 8 && Combo < 8)
+        if (ComboCounter == 8 && Combo < 4)
         {
-            Combo *= 2;
+            Combo += 1;
             ComboCounter = 0;
         }
 
