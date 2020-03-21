@@ -45,7 +45,7 @@ public class NoteChecker : MonoBehaviour
             }
         }
 
-        else
+        else if(meterScript.Won == false && meterScript.Lost == false)
         {
             if (Input.GetKeyDown(key) && active && meterScript.Invincible == false)
             {

@@ -45,45 +45,45 @@ public class HowManyPlayersScript : MonoBehaviour
         }
         if (Player1Playing == true && Player2Playing == true && Player3Playing == false && Player4Playing == false)
         {
-            Player1.rect = new Rect(0, 0, 1, 0.5f);
-            Player2.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player1.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player2.rect = new Rect(0, 0, 1, 0.5f);
             Player3.rect = new Rect(0, 0, 0, 0);
             Player4.rect = new Rect(0, 0, 0, 0);
         }
         if (Player1Playing == true && Player2Playing == false && Player3Playing == true && Player4Playing == false)
         {
-            Player1.rect = new Rect(0, 0, 1, 0.5f);
+            Player1.rect = new Rect(0, 0.5f, 1, 0.5f);
             Player2.rect = new Rect(0, 0, 0, 0);
-            Player3.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player3.rect = new Rect(0, 0, 1, 0.5f);
             Player4.rect = new Rect(0, 0, 0, 0);
         }
         if (Player1Playing == true && Player2Playing == false && Player3Playing == false && Player4Playing == true)
         {
-            Player1.rect = new Rect(0, 0, 1, 0.5f);
+            Player1.rect = new Rect(0, 0.5f, 1, 0.5f);
             Player2.rect = new Rect(0, 0, 0, 0);
             Player3.rect = new Rect(0, 0, 0, 0);
-            Player4.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player4.rect = new Rect(0, 0, 1, 0.5f);
         }
         if (Player1Playing == false && Player2Playing == true && Player3Playing == true && Player4Playing == false)
         {
             Player1.rect = new Rect(0, 0, 0, 0);
-            Player2.rect = new Rect(0, 0, 1, 0.5f);
-            Player3.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player2.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player3.rect = new Rect(0, 0, 1, 0.5f);
             Player4.rect = new Rect(0, 0, 0, 0);
         }
         if (Player1Playing == false && Player2Playing == true && Player3Playing == false && Player4Playing == true)
         {
             Player1.rect = new Rect(0, 0, 0, 0);
-            Player2.rect = new Rect(0, 0, 1, 0.5f);
+            Player2.rect = new Rect(0, 0.5f, 1, 0.5f);
             Player3.rect = new Rect(0, 0, 0, 0);
-            Player4.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player4.rect = new Rect(0, 0, 1, 0.5f);
         }
         if (Player1Playing == false && Player2Playing == false && Player3Playing == true && Player4Playing == true)
         {
             Player1.rect = new Rect(0, 0, 0, 0);
             Player2.rect = new Rect(0, 0, 0, 0);
-            Player3.rect = new Rect(0, 0, 0, 0.5f);
-            Player4.rect = new Rect(0, 0.5f, 1, 0.5f);
+            Player3.rect = new Rect(0, 0.5f, 0, 0.5f);
+            Player4.rect = new Rect(0, 0, 1, 0.5f);
         }
         if (Player1Playing == true && Player2Playing == true && Player3Playing == true && Player4Playing == false)
         {

@@ -69,6 +69,7 @@ public class MeterScript : MonoBehaviour
 
     public void Win()
     {
+        if(Lost == false)
         Won = true;
     }
 }
