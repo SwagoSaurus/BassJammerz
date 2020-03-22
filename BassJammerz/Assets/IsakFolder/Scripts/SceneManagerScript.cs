@@ -90,5 +90,10 @@ public class SceneManagerScript : MonoBehaviour
 
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            SceneManager.LoadScene("ChooseSongScene");
+        }
     }
 }

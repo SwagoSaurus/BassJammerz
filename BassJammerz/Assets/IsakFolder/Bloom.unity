@@ -19795,6 +19795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2cam
       objectReference: {fileID: 0}
+    - target: {fileID: 5598099407976247234, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5598099407976247235, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -54614,6 +54619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player3cam
       objectReference: {fileID: 0}
+    - target: {fileID: 5598099407976247234, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5598099407976247235, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -55608,6 +55618,7 @@ Transform:
   - {fileID: 1574381118}
   - {fileID: 1908936598}
   - {fileID: 1356840816}
+  - {fileID: 1369048469}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70942,6 +70953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player4cam
       objectReference: {fileID: 0}
+    - target: {fileID: 5598099407976247234, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5598099407976247235, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -73761,6 +73777,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 773377190}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1369048468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369048469}
+  - component: {fileID: 1369048470}
+  - component: {fileID: 1369048471}
+  m_Layer: 0
+  m_Name: HighscoreSaverPlayer1
+  m_TagString: BloomSaver1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1369048469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369048468}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038774593}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369048470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369048468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9300d9d2812e541b01f2bdf26b608c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeterScript: {fileID: 1416446082}
+  ScoreScript: {fileID: 1723483867}
+  BloomTransfer1: {fileID: 1369048468}
+  NewScore: 0
+  PlayerWon: 0
+--- !u!114 &1369048471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369048468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ec363cd3ea1b64080ebf5e94515737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewHighscore: 0
 --- !u!1001 &1369995342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91776,7 +91855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726448920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1024.5, y: 0.64, z: 0}
+  m_LocalPosition: {x: -25.6, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1038774593}
@@ -112076,6 +112155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1038774593}
     m_Modifications:
+    - target: {fileID: 1999198060797037375, guid: 1974058c74af532478948872da5f342a,
+        type: 3}
+      propertyPath: m_TagString
+      value: ScorePlayer1
+      objectReference: {fileID: 0}
     - target: {fileID: 1999198061669872150, guid: 1974058c74af532478948872da5f342a,
         type: 3}
       propertyPath: m_Name
@@ -112159,6 +112243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player1cam
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598099407976247234, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5598099407976247235, guid: 6e2d4df3c50fedb4aa1f02930d7afd28,
         type: 3}
@@ -112362,6 +112451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561388875310084568, guid: dc74a78466073644aa654b0a11725a7c,
+        type: 3}
+      propertyPath: m_TagString
+      value: MeterPlayer1
       objectReference: {fileID: 0}
     - target: {fileID: 6561388875310084572, guid: dc74a78466073644aa654b0a11725a7c,
         type: 3}
