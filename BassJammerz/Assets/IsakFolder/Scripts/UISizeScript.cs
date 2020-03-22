@@ -96,7 +96,7 @@ public class UISizeScript : MonoBehaviour
                 objectRectTransform.localScale = new Vector3(TextIncrease - 1, TextIncrease - 1, TextIncrease - 1);
             }
         }
-        if(meterScript.Lost == true && DeathText == true)
+        if (meterScript.Lost == true && DeathText == true)
         {
             TextIncrease += 0.02f;
             if (TextIncrease <= 1 && SecondaryText == false && ThirdText == false)

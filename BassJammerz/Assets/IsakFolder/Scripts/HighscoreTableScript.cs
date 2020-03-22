@@ -64,8 +64,16 @@ public class HighscoreTableScript : MonoBehaviour
         {
             // There's no stored table, initialize
             Debug.Log("Initializing table with default values...");
-            AddHighscoreEntry(1, "NUL");
-            
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
+            AddHighscoreEntry(0, "AAA");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
