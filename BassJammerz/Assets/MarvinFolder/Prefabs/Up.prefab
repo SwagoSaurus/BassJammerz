@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 8063417168896572463}
   m_Layer: 0
   m_Name: Up
-  m_TagString: Note
+  m_TagString: UpNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
