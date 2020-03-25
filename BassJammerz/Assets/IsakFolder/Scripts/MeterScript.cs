@@ -64,11 +64,13 @@ public class MeterScript : MonoBehaviour
     }
     public void Lose()
     {
+        if(Won == false)
         Lost = true;
     }
 
     public void Win()
     {
+        if(Lost == false)
         Won = true;
     }
 }

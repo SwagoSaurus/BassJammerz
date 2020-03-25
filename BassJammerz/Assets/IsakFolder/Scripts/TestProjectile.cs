@@ -23,6 +23,6 @@ public class TestProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+        
     }
 }

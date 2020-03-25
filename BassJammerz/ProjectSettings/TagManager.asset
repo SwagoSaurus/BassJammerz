@@ -6,6 +6,18 @@ TagManager:
   tags:
   - Note
   - WinNote
+  - ScorePlayer1
+  - ScorePlayer2
+  - ScorePlayer3
+  - ScorePlayer4
+  - MeterPlayer1
+  - MeterPlayer2
+  - MeterPlayer3
+  - MeterPlayer4
+  - BloomSaver1
+  - BloomSaver2
+  - BloomSaver3
+  - BloomSaver4
   layers:
   - Default
   - TransparentFX
@@ -17,10 +29,10 @@ TagManager:
   - 
   - Note
   - MusicMakerNote
-  - 
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - Player3
+  - Player4
   - 
   - 
   - 
