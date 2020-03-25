@@ -4,39 +4,77 @@ using UnityEngine;
 
 public class PickSongMusicScript : MonoBehaviour
 {
-    public AudioSource Bloom;
-    public AudioSource ATG;
+    public AudioClip Song;
     public bool BloomPlay;
     public bool ATGPlay;
+    //public GameObject OtherSong1;
+    //PickSongMusicScript otherSong1;
+    float SongPlayCount;
+    float Volume;
+    float VolumeIncrease;
+    float VolumeEndTime;
+
+    private AudioSource source;
 
     void Start()
     {
-        Bloom = GetComponent<AudioSource>();
-        ATG = GetComponent<AudioSource>();
+        //otherSong1 = OtherSong1.GetComponent<PickSongMusicScript>();
+        source = GetComponent<AudioSource>();
+        source.clip = Song;
+        source.playOnAwake = false;
+        VolumeIncrease = 0;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (ATGPlay)
         {
-            //ATG.timeSamples = 120;
-            ATG.Play();
+            PlaySoundInterval(78f, 128f, 0);
         }
-        else if(!ATGPlay)
-        {
-            ATG.Stop();
-        }
-
         if (BloomPlay)
         {
-           // Bloom.timeSamples = 120;
-            Bloom.Play();
+            PlaySoundInterval(87f, 137f, 0);
+           
+            //PlaySoundInterval(5220, 8160);
         }
-        else if(!BloomPlay)
+
+        if(!ATGPlay && !BloomPlay)
         {
-            Bloom.Stop();
+            source.Stop();
+            //SongPlayCount = 0;
+            VolumeIncrease = 0;
+            VolumeEndTime = 0;
         }
+    }
+
+    void PlaySoundInterval(float fromSeconds, float toSeconds, float BeginVolume)
+    {
+        if (!source.isPlaying)
+        {
+            Volume = BeginVolume;
+            VolumeIncrease = 0;
+            VolumeEndTime = 0;
+            source.time = fromSeconds;
+            source.Play();
+            source.SetScheduledEndTime(AudioSettings.dspTime + (toSeconds - fromSeconds));
+        }
+
+        VolumeEndTime++;
+
+        if (Volume < 0.5 && VolumeEndTime < 2520)
+        {
+            VolumeIncrease++;
+            Volume = VolumeIncrease * 0.001f;
+        }
+
+        if(VolumeEndTime >= 11500)
+        {
+            VolumeIncrease--;
+            Volume = VolumeIncrease * 0.001f;
+        }
+
+        source.volume = Volume;
     }
 }

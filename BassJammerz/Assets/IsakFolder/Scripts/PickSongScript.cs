@@ -28,13 +28,14 @@ public class PickSongScript : MonoBehaviour
     HighscoreTableScript highscoretableScript;
     float lerpTime;
     public int PositionNr;
-    public GameObject BloomPickSongMusicScript;
-    PickSongMusicScript picksongmusicScriptBloom;
-    public GameObject ATGPickSongMusicScript;
-    PickSongMusicScript picksongmusicScriptATG;
+    public GameObject PickSongMusicScript;
+    PickSongMusicScript picksongmusicScript;
+
+    
     // Start is called before the first frame update
     void Awake()
     {
+        
         if(Bloom == true)
         {
             SceneName = "Bloom";
@@ -52,8 +53,8 @@ public class PickSongScript : MonoBehaviour
     void Start()
     {
         highscoretableScript = HighscoreTable.GetComponent<HighscoreTableScript>();
-        picksongmusicScriptBloom = BloomPickSongMusicScript.GetComponent<PickSongMusicScript>();
-        picksongmusicScriptATG = ATGPickSongMusicScript.GetComponent<PickSongMusicScript>();
+        picksongmusicScript = PickSongMusicScript.GetComponent<PickSongMusicScript>();
+        
 
         startPos = textTransform.anchoredPosition;
         earlyPos = startPos;
@@ -118,20 +119,20 @@ public class PickSongScript : MonoBehaviour
             HighscoreTable.gameObject.SetActive(true);
 
             if (Bloom)
-                picksongmusicScriptBloom.BloomPlay = true;
+                picksongmusicScript.BloomPlay = true;
 
             if (ATG)
-                picksongmusicScriptBloom.ATGPlay = true;
+                picksongmusicScript.ATGPlay = true;
 
         }
         else
         {
             HighscoreTable.gameObject.SetActive(false);
             if (Bloom)
-                picksongmusicScriptATG.BloomPlay = false;
+                picksongmusicScript.BloomPlay = false;
 
             if (ATG)
-                picksongmusicScriptATG.ATGPlay = false;
+                picksongmusicScript.ATGPlay = false;
         }
         //Debug.Log(TopText.anchoredPosition.y);
         //Debug.Log(BottomText.anchoredPosition.y);
