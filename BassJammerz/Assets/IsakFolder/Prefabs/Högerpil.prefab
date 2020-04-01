@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 2204858863240971544}
   m_Layer: 0
   m_Name: "H\xF6gerpil"
-  m_TagString: Note
+  m_TagString: RightNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
