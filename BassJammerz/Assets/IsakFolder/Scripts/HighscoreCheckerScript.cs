@@ -40,7 +40,7 @@ public class HighscoreCheckerScript : MonoBehaviour
         if (sceneName == "ChooseSongScene" )
         {
             CurrentLowestScore = highscoretablescript.CurrentHighscore;
-
+            bloomtransfer1Script.CurrentScore = CurrentLowestScore;
         }
 
         

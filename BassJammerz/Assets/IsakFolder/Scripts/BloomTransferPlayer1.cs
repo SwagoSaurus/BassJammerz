@@ -7,10 +7,12 @@ public class BloomTransferPlayer1 : MonoBehaviour
 {
     static public float NewScoreValue;
     public float NewScore;
+    public string NewWinName;
     static public string NewName;
     public string NewHighname;
     public float NewHighscore;
     string sceneName;
+    public float CurrentScore;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class BloomTransferPlayer1 : MonoBehaviour
         if (sceneName == "Bloom")
         {
             NewScoreValue = NewScore;
+            NewName = NewWinName;
         }
 
         
