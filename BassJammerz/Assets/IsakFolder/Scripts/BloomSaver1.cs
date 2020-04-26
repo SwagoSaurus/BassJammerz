@@ -38,7 +38,7 @@ public class BloomSaver1 : MonoBehaviour
         {
             PlayerWon = true;
             bloomtransfer1Script.NewScore =  scoreScript.Score;
-            bloomtransfer1Script.NewHighname = winnameScript.WinName;
+            bloomtransfer1Script.NewWinName = winnameScript.WinName;
         }
 
     }

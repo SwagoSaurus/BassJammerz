@@ -11,6 +11,12 @@ public class HighscoreCheckerScript : MonoBehaviour
     HighscoreTableScript highscoretablescript;
     public GameObject BloomTransfer1;
     BloomTransferPlayer1 bloomtransfer1Script;
+    public GameObject BloomTransfer2;
+    public GameObject BloomTransfer3;
+    public GameObject BloomTransfer4;
+    BloomTransferPlayer2 bloomtransfer2Script;
+    BloomTransferPlayer3 bloomtransfer3Script;
+    BloomTransferPlayer4 bloomtransfer4Script;
     public float NewScore;
     public string Name;
     public float CurrentLowestScore;
@@ -26,9 +32,12 @@ public class HighscoreCheckerScript : MonoBehaviour
     {
         highscoretablescript = HighscoreTableScript.GetComponent<HighscoreTableScript>();
         bloomtransfer1Script = BloomTransfer1.GetComponent<BloomTransferPlayer1>();
+        bloomtransfer2Script = BloomTransfer2.GetComponent<BloomTransferPlayer2>();
+        bloomtransfer3Script = BloomTransfer3.GetComponent<BloomTransferPlayer3>();
+        bloomtransfer4Script = BloomTransfer4.GetComponent<BloomTransferPlayer4>();
 
 
-        
+
         NewScore = bloomtransfer1Script.NewHighscore;
         Name = bloomtransfer1Script.NewHighname;
 
@@ -41,6 +50,9 @@ public class HighscoreCheckerScript : MonoBehaviour
         {
             CurrentLowestScore = highscoretablescript.CurrentHighscore;
             bloomtransfer1Script.CurrentScore = CurrentLowestScore;
+            bloomtransfer2Script.CurrentScore = CurrentLowestScore;
+            bloomtransfer3Script.CurrentScore = CurrentLowestScore;
+            bloomtransfer4Script.CurrentScore = CurrentLowestScore;
         }
 
         

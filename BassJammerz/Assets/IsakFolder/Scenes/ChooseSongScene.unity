@@ -270,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &66427981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115877493
 GameObject:
@@ -780,7 +780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &139831859
 MonoBehaviour:
@@ -984,6 +984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 36675783}
   BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -1652,6 +1655,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341469063}
   m_CullTransparentMesh: 0
+--- !u!1 &432719728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432719730}
+  - component: {fileID: 432719729}
+  m_Layer: 0
+  m_Name: BloomSaver4
+  m_TagString: BloomSaver1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &432719729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432719728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5216054b5c327468c842888f652cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+--- !u!4 &432719730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432719728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -76.61927, y: -32.224144, z: 11.708307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442986372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 36675783}
   BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -2563,7 +2617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &773823035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2632,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
   BloomTransfer1: {fileID: 66427980}
+  BloomTransfer2: {fileID: 0}
+  BloomTransfer3: {fileID: 0}
+  BloomTransfer4: {fileID: 0}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -2594,7 +2651,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &781784366
 GameObject:
@@ -2685,7 +2742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &783263337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2700,6 +2757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
   BloomTransfer1: {fileID: 66427980}
+  BloomTransfer2: {fileID: 0}
+  BloomTransfer3: {fileID: 0}
+  BloomTransfer4: {fileID: 0}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -2716,7 +2776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823859419
 GameObject:
@@ -3384,6 +3444,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937328674}
   m_CullTransparentMesh: 0
+--- !u!1 &937511378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937511380}
+  - component: {fileID: 937511379}
+  m_Layer: 0
+  m_Name: BloomSaver3
+  m_TagString: BloomSaver1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &937511379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937511378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f68408bfdb91d4190fdf1c57d2e038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+--- !u!4 &937511380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937511378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -76.61927, y: -32.224144, z: 11.708307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970246727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &970246728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3415,6 +3523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
   BloomTransfer1: {fileID: 66427980}
+  BloomTransfer2: {fileID: 0}
+  BloomTransfer3: {fileID: 0}
+  BloomTransfer4: {fileID: 0}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -3431,7 +3542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006079027
 GameObject:
@@ -3932,6 +4043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 36675783}
   BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -4122,7 +4236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1176735462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,6 +4251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
   BloomTransfer1: {fileID: 66427980}
+  BloomTransfer2: {fileID: 0}
+  BloomTransfer3: {fileID: 0}
+  BloomTransfer4: {fileID: 0}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -4153,7 +4270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244451650
 GameObject:
@@ -4540,6 +4657,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327886977}
   m_CullTransparentMesh: 0
+--- !u!1 &1361633081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361633083}
+  - component: {fileID: 1361633082}
+  m_Layer: 0
+  m_Name: BloomSaver2
+  m_TagString: BloomSaver1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1361633082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361633081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60c16776179ffe4bbe040df35d1e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+--- !u!4 &1361633083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361633081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -76.61927, y: -32.224144, z: 11.708307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372779360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,7 +5423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1543989620
 MonoBehaviour:
@@ -5306,6 +5471,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 36675783}
   BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
@@ -6206,8 +6374,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewScore: 0
+  NewWinName: 
   NewHighname: 
   NewHighscore: 0
+  CurrentScore: 0
 --- !u!1 &1983117972
 GameObject:
   m_ObjectHideFlags: 0
