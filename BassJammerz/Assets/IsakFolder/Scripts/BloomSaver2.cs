@@ -10,8 +10,8 @@ public class BloomSaver2 : MonoBehaviour
     MeterScript meterScript;
     public GameObject ScoreScript;
     ScoreScript scoreScript;
-    public GameObject BloomTransfer1;
-    BloomTransferPlayer1 bloomtransfer1Script;
+    public GameObject BloomTransfer2;
+    BloomTransferPlayer2 bloomtransfer2Script;
     public GameObject WinName;
     WinNameScript winnameScript;
     public float NewScore;
@@ -27,7 +27,7 @@ public class BloomSaver2 : MonoBehaviour
     {
         meterScript = MeterScript.GetComponent<MeterScript>();
         scoreScript = ScoreScript.GetComponent<ScoreScript>();
-        bloomtransfer1Script = BloomTransfer1.GetComponent<BloomTransferPlayer1>();
+        bloomtransfer2Script = BloomTransfer2.GetComponent<BloomTransferPlayer2>();
         winnameScript = WinName.GetComponent<WinNameScript>();
     }
 
@@ -37,8 +37,8 @@ public class BloomSaver2 : MonoBehaviour
         if (meterScript.Won == true)
         {
             PlayerWon = true;
-            bloomtransfer1Script.NewScore = scoreScript.Score;
-            bloomtransfer1Script.NewWinName = winnameScript.WinName;
+            bloomtransfer2Script.NewScore = scoreScript.Score;
+            bloomtransfer2Script.NewWinName = winnameScript.WinName;
         }
 
     }

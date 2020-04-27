@@ -10,8 +10,10 @@ public class ATGSaver1 : MonoBehaviour
     MeterScript meterScript;
     public GameObject ScoreScript;
     ScoreScript scoreScript;
-    public GameObject BloomTransfer1;
-    BloomTransferPlayer1 bloomtransfer1Script;
+    public GameObject ATGTransfer1;
+    ATGTransferPlayer1 atgtransfer1Script;
+    public GameObject WinName;
+    WinNameScript winnameScript;
     public float NewScore;
     public bool PlayerWon;
 
@@ -25,7 +27,8 @@ public class ATGSaver1 : MonoBehaviour
     {
         meterScript = MeterScript.GetComponent<MeterScript>();
         scoreScript = ScoreScript.GetComponent<ScoreScript>();
-        bloomtransfer1Script = BloomTransfer1.GetComponent<BloomTransferPlayer1>();
+        atgtransfer1Script = ATGTransfer1.GetComponent<ATGTransferPlayer1>();
+        winnameScript = WinName.GetComponent<WinNameScript>();
     }
 
     // Update is called once per frame
@@ -34,7 +37,8 @@ public class ATGSaver1 : MonoBehaviour
         if (meterScript.Won == true)
         {
             PlayerWon = true;
-            bloomtransfer1Script.NewScore = scoreScript.Score;
+            atgtransfer1Script.NewScore = scoreScript.Score;
+            atgtransfer1Script.NewWinName = winnameScript.WinName;
         }
 
     }

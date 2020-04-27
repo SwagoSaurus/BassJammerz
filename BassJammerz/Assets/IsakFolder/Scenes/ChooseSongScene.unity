@@ -121,6 +121,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9658329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9658331}
+  - component: {fileID: 9658330}
+  m_Layer: 0
+  m_Name: FunkyFunSaver1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9658330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9658329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27705296a9459a24b83a429ec05853c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &9658331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9658329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &36675783
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +230,8 @@ MonoBehaviour:
   HighscoreChecker2: {fileID: 484840674}
   HighscoreChecker3: {fileID: 1610239704}
   HighscoreChecker4: {fileID: 212303086}
+  NewHS: 0
+  AddedNew: 0
 --- !u!1 &44721710
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &66427981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +335,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewScore: 0
+  NewWinName: 
   NewHighname: 
   NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
 --- !u!4 &66427982
 Transform:
   m_ObjectHideFlags: 0
@@ -780,7 +834,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &139831859
 MonoBehaviour:
@@ -987,10 +1041,21 @@ MonoBehaviour:
   BloomTransfer2: {fileID: 1361633081}
   BloomTransfer3: {fileID: 937511378}
   BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
   PlayerNr: 4
+  ATG: 0
+  Bloom: 1
+  FunkyFun: 0
 --- !u!4 &212303088
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,6 +1335,69 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &256055609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256055610}
+  - component: {fileID: 256055611}
+  m_Layer: 0
+  m_Name: FunkyFunHighscoreCheckerPlayer1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256055610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256055609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256055611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256055609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240c1c3dbf96eb4e8ae7b63111a4936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighscoreTableScript: {fileID: 1924133275}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
+  NewScore: 0
+  Name: 
+  CurrentLowestScore: 0
+  PlayerNr: 1
+  ATG: 0
+  Bloom: 0
+  FunkyFun: 1
 --- !u!1 &272245741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1627,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329429900}
   m_CullTransparentMesh: 0
+--- !u!1 &331969629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331969631}
+  - component: {fileID: 331969630}
+  m_Layer: 0
+  m_Name: FunkyFunSaver3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &331969630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331969629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5a580da420cb740aafbf50a60e97c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &331969631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331969629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341469063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1832,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341469063}
   m_CullTransparentMesh: 0
+--- !u!1 &354480289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354480291}
+  - component: {fileID: 354480290}
+  m_Layer: 0
+  m_Name: ATGSaver3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354480290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354480289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18164ae04b5b3f949bd65f54feb9f702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &354480291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354480289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 855.17, y: 286.98462, z: -715.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &432719728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +1915,7 @@ MonoBehaviour:
   NewHighname: 
   NewHighscore: 0
   CurrentScore: 0
+  Restart: 0
 --- !u!4 &432719730
 Transform:
   m_ObjectHideFlags: 0
@@ -1893,10 +2120,21 @@ MonoBehaviour:
   BloomTransfer2: {fileID: 1361633081}
   BloomTransfer3: {fileID: 937511378}
   BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
   PlayerNr: 2
+  ATG: 0
+  Bloom: 1
+  FunkyFun: 0
 --- !u!4 &484840676
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,6 +2148,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &487700241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487700243}
+  - component: {fileID: 487700242}
+  m_Layer: 0
+  m_Name: FunkyFunHighscoreCheckerPlayer3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &487700242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487700241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240c1c3dbf96eb4e8ae7b63111a4936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighscoreTableScript: {fileID: 1924133275}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
+  NewScore: 0
+  Name: 
+  CurrentLowestScore: 0
+  PlayerNr: 3
+  ATG: 0
+  Bloom: 0
+  FunkyFun: 1
+--- !u!4 &487700243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487700241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &504482419
 GameObject:
@@ -1984,6 +2285,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504482419}
   m_CullTransparentMesh: 0
+--- !u!1 &551392034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 551392036}
+  - component: {fileID: 551392035}
+  m_Layer: 0
+  m_Name: ATGSaver2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &551392035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551392034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b33bf7b40169934d9e972d698e767ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &551392036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551392034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 855.17, y: 286.98462, z: -715.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556379468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,7 +2967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &773823035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,14 +2981,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
-  BloomTransfer1: {fileID: 66427980}
-  BloomTransfer2: {fileID: 0}
-  BloomTransfer3: {fileID: 0}
-  BloomTransfer4: {fileID: 0}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
-  PlayerNr: 1
+  PlayerNr: 3
+  ATG: 1
+  Bloom: 0
+  FunkyFun: 0
 --- !u!4 &773823036
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,7 +3103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &783263337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,14 +3117,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
-  BloomTransfer1: {fileID: 66427980}
-  BloomTransfer2: {fileID: 0}
-  BloomTransfer3: {fileID: 0}
-  BloomTransfer4: {fileID: 0}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
   PlayerNr: 1
+  ATG: 1
+  Bloom: 0
+  FunkyFun: 0
 --- !u!4 &783263338
 Transform:
   m_ObjectHideFlags: 0
@@ -2777,6 +3149,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &795216810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795216812}
+  - component: {fileID: 795216811}
+  m_Layer: 0
+  m_Name: FunkyFunHighscoreCheckerPlayer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &795216811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795216810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240c1c3dbf96eb4e8ae7b63111a4936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighscoreTableScript: {fileID: 1924133275}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
+  NewScore: 0
+  Name: 
+  CurrentLowestScore: 0
+  PlayerNr: 2
+  ATG: 0
+  Bloom: 0
+  FunkyFun: 1
+--- !u!4 &795216812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795216810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823859419
 GameObject:
@@ -3478,6 +3913,7 @@ MonoBehaviour:
   NewHighname: 
   NewHighscore: 0
   CurrentScore: 0
+  Restart: 0
 --- !u!4 &937511380
 Transform:
   m_ObjectHideFlags: 0
@@ -3508,7 +3944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &970246728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3522,14 +3958,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
-  BloomTransfer1: {fileID: 66427980}
-  BloomTransfer2: {fileID: 0}
-  BloomTransfer3: {fileID: 0}
-  BloomTransfer4: {fileID: 0}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
-  PlayerNr: 1
+  PlayerNr: 4
+  ATG: 1
+  Bloom: 0
+  FunkyFun: 0
 --- !u!4 &970246729
 Transform:
   m_ObjectHideFlags: 0
@@ -3543,6 +3990,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &998478151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998478153}
+  - component: {fileID: 998478152}
+  m_Layer: 0
+  m_Name: FunkyFunSaver4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &998478152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998478151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d40c450bd5a1c4da6001b8b09fd13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &998478153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998478151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006079027
 GameObject:
@@ -3856,6 +4352,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055692477}
   m_CullTransparentMesh: 0
+--- !u!1 &1064061777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064061779}
+  - component: {fileID: 1064061778}
+  m_Layer: 0
+  m_Name: FunkyFunHighscoreCheckerPlayer4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1064061778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064061777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240c1c3dbf96eb4e8ae7b63111a4936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighscoreTableScript: {fileID: 1924133275}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
+  NewScore: 0
+  Name: 
+  CurrentLowestScore: 0
+  PlayerNr: 4
+  ATG: 0
+  Bloom: 0
+  FunkyFun: 1
+--- !u!4 &1064061779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064061777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077146535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,10 +4605,21 @@ MonoBehaviour:
   BloomTransfer2: {fileID: 1361633081}
   BloomTransfer3: {fileID: 937511378}
   BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
   PlayerNr: 1
+  ATG: 0
+  Bloom: 1
+  FunkyFun: 0
 --- !u!4 &1090603768
 Transform:
   m_ObjectHideFlags: 0
@@ -4236,7 +4806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1176735462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4250,14 +4820,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighscoreTableScript: {fileID: 1847897067}
-  BloomTransfer1: {fileID: 66427980}
-  BloomTransfer2: {fileID: 0}
-  BloomTransfer3: {fileID: 0}
-  BloomTransfer4: {fileID: 0}
+  BloomTransfer1: {fileID: 1980832764}
+  BloomTransfer2: {fileID: 1361633081}
+  BloomTransfer3: {fileID: 937511378}
+  BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
-  PlayerNr: 1
+  PlayerNr: 2
+  ATG: 1
+  Bloom: 0
+  FunkyFun: 0
 --- !u!4 &1176735463
 Transform:
   m_ObjectHideFlags: 0
@@ -4691,6 +5272,7 @@ MonoBehaviour:
   NewHighname: 
   NewHighscore: 0
   CurrentScore: 0
+  Restart: 0
 --- !u!4 &1361633083
 Transform:
   m_ObjectHideFlags: 0
@@ -4940,6 +5522,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381989878}
   m_CullTransparentMesh: 0
+--- !u!1 &1387461132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387461134}
+  - component: {fileID: 1387461133}
+  m_Layer: 0
+  m_Name: ATGSaver4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1387461133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387461132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6932a22b13873479182d83a3beaf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &1387461134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387461132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 855.17, y: 286.98462, z: -715.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410381629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,7 +6054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1543989620
 MonoBehaviour:
@@ -5474,10 +6105,21 @@ MonoBehaviour:
   BloomTransfer2: {fileID: 1361633081}
   BloomTransfer3: {fileID: 937511378}
   BloomTransfer4: {fileID: 432719728}
+  ATGTransfer1: {fileID: 66427980}
+  ATGTransfer2: {fileID: 551392034}
+  ATGTransfer3: {fileID: 354480289}
+  ATGTransfer4: {fileID: 1387461132}
+  FunkyFunTransfer1: {fileID: 9658329}
+  FunkyFunTransfer2: {fileID: 2099791553}
+  FunkyFunTransfer3: {fileID: 331969629}
+  FunkyFunTransfer4: {fileID: 998478151}
   NewScore: 0
   Name: 
   CurrentLowestScore: 0
   PlayerNr: 3
+  ATG: 0
+  Bloom: 1
+  FunkyFun: 0
 --- !u!4 &1610239706
 Transform:
   m_ObjectHideFlags: 0
@@ -5931,7 +6573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1847897067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ec4d1dd5a089947b9d7381fa25ae86, type: 3}
+  m_Script: {fileID: 11500000, guid: 7aaf2b4cb9bfa784988f44e1f7b12dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHighscore: 0
@@ -5939,6 +6581,52 @@ MonoBehaviour:
   HighscoreChecker2: {fileID: 1176735461}
   HighscoreChecker3: {fileID: 773823034}
   HighscoreChecker4: {fileID: 970246727}
+  NewHS: 0
+  AddedNew: 0
+--- !u!1 &1861171064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861171065}
+  - component: {fileID: 1861171066}
+  m_Layer: 0
+  m_Name: SceneReset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861171065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861171064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861171066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861171064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99efbd9eacff30e4a87172e2ce1dc0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Restarter: 0
 --- !u!1 &1861555063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,14 +6771,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924133275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ec4d1dd5a089947b9d7381fa25ae86, type: 3}
+  m_Script: {fileID: 11500000, guid: f814f214dd5ab8c4789bef04d9f23a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHighscore: 0
-  HighscoreChecker1: {fileID: 1090603766}
-  HighscoreChecker2: {fileID: 484840674}
-  HighscoreChecker3: {fileID: 1610239704}
-  HighscoreChecker4: {fileID: 212303086}
+  HighscoreChecker1: {fileID: 256055609}
+  HighscoreChecker2: {fileID: 795216810}
+  HighscoreChecker3: {fileID: 487700241}
+  HighscoreChecker4: {fileID: 1064061777}
+  NewHS: 0
+  AddedNew: 0
 --- !u!1 &1959119990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,6 +7068,7 @@ MonoBehaviour:
   NewHighname: 
   NewHighscore: 0
   CurrentScore: 0
+  Restart: 0
 --- !u!1 &1983117972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,3 +7454,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051722383}
   m_CullTransparentMesh: 0
+--- !u!1 &2099791553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099791555}
+  - component: {fileID: 2099791554}
+  m_Layer: 0
+  m_Name: FunkyFunSaver2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2099791554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099791553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1093488f6bf7ab649a2fe153e7992b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: 0
+  NewWinName: 
+  NewHighname: 
+  NewHighscore: 0
+  CurrentScore: 0
+  Restart: 0
+--- !u!4 &2099791555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099791553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.67389, y: 6.1382923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

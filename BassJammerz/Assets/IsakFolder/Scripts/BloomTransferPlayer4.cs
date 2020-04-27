@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class BloomTransferPlayer4 : MonoBehaviour
 {
     static public float NewScoreValue;
+    static public float NewScoreChecker;
     public float NewScore;
     public string NewWinName;
     static public string NewName;
+    static public string NewNameChecker;
     public string NewHighname;
     public float NewHighscore;
     string sceneName;
     public float CurrentScore;
+    public bool Restart;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +27,20 @@ public class BloomTransferPlayer4 : MonoBehaviour
         {
             NewScoreValue = 0;
             NewName = "AAA";
+            Restart = false;
         }
         if (sceneName == "ChooseSongScene")
         {
+            if (NewScoreChecker == NewScoreValue && NewNameChecker == NewName)
+            {
+                NewScoreValue = 0;
+                NewName = "AAA";
+            }
+
             NewHighscore = NewScoreValue;
             NewHighname = NewName;
+            NewScoreChecker = NewScoreValue;
+            NewNameChecker = NewName;
         }
     }
 
