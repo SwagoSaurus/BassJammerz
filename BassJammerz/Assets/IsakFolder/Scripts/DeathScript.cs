@@ -33,6 +33,35 @@ public class DeathScript : MonoBehaviour
             meterScript.DecreaseRockMeter();
             Destroy(col.gameObject);
         }
+        else if (col.gameObject.tag == "RightNote")
+        {
+            Script.ResetCombo();
+            Script.ResetStreak();
+            meterScript.DecreaseRockMeter();
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.tag == "UpNote")
+        {
+            Script.ResetCombo();
+            Script.ResetStreak();
+            meterScript.DecreaseRockMeter();
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.tag == "LeftNote")
+        {
+            Script.ResetCombo();
+            Script.ResetStreak();
+            meterScript.DecreaseRockMeter();
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.tag == "DownNote")
+        {
+            Script.ResetCombo();
+            Script.ResetStreak();
+            meterScript.DecreaseRockMeter();
+            Destroy(col.gameObject);
+        }
+
 
         else if(col.gameObject.tag == "WinNote")
         {

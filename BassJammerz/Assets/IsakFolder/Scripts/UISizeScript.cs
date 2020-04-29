@@ -33,6 +33,7 @@ public class UISizeScript : MonoBehaviour
     public bool WinText;
     public bool HighscoreText;
     public bool WinNameText;
+    public bool MainScreenText;
     float HighscoreTimer;
 
     float hej;
@@ -166,12 +167,21 @@ public class UISizeScript : MonoBehaviour
             }
             
         }
-        if(scenemanagerScript.Player1Dead == true && scenemanagerScript.Player2Dead == true && scenemanagerScript.Player3Dead == true && scenemanagerScript.Player4Dead == true && DeathText == true && ThirdText == true)
+        if(scenemanagerScript.Player1Dead && scenemanagerScript.Player2Dead && scenemanagerScript.Player3Dead && scenemanagerScript.Player4Dead && DeathText && ThirdText)
         {
             TextIncreaseAll += 0.02f;
             if (TextIncreaseAll <= 3 && TextIncreaseAll >=2 && PrimaryText == false && SecondaryText == false && ThirdText == true)
             {
                 objectRectTransform.localScale = new Vector3(TextIncreaseAll-2, TextIncreaseAll-2, TextIncreaseAll-2);
+            }
+        }
+
+        if(meterScript.Won && DeathText && ThirdText && MainScreenText)
+        {
+            TextIncreaseAll += 0.02f;
+            if (TextIncreaseAll <= 10 && TextIncreaseAll >= 9 && PrimaryText == false && SecondaryText == false && ThirdText == true)
+            {
+                objectRectTransform.localScale = new Vector3(TextIncreaseAll - 9, TextIncreaseAll - 9, TextIncreaseAll - 9);
             }
         }
     }

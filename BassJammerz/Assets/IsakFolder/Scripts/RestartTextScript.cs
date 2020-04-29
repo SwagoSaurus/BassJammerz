@@ -9,6 +9,8 @@ public class RestartTextScript : MonoBehaviour
     public TextMeshProUGUI txt;
     public GameObject SceneManagerScript;
     SceneManagerScript scenemanagerscript;
+    public bool RestartText;
+    public bool MainScreenText;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,14 @@ public class RestartTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        txt.text = "Press " + scenemanagerscript.RestartKey + " to restart the song";
+        if (RestartText)
+        {
+            txt.text = "PRESS " + scenemanagerscript.RestartKey + " TO RESTART THE SONG";
+        }
+        else if(MainScreenText)
+        {
+            txt.text = "PRESS " + scenemanagerscript.MainScreenKey + " TO GO BACK TO THE MAIN MENU";
+        }
         
     }
     public void TextSize(float size)
