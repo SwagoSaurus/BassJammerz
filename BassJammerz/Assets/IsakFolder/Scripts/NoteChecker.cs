@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NoteChecker : MonoBehaviour
 {
-    public KeyCode key;
+    public ArcadeButton key;
+	public int playerId;
     GameObject note;
     [SerializeField]
     Transform DistanceChild;
@@ -17,7 +18,6 @@ public class NoteChecker : MonoBehaviour
     float score;
     [SerializeField]
     float combo = 1;
-
     public bool CreateMode;
     public GameObject N;
    
@@ -39,7 +39,7 @@ public class NoteChecker : MonoBehaviour
         if (CreateMode)
         {
             meterScript.Invincible = true;
-            if(Input.GetKeyDown(key))
+            if(Arcade.GetKeyDown(playerId, key))
             {
                 Instantiate(N, transform.position, Quaternion.identity);
             }
@@ -47,7 +47,7 @@ public class NoteChecker : MonoBehaviour
 
         else if(meterScript.Won == false && meterScript.Lost == false)
         {
-            if (Input.GetKeyDown(key) && active && meterScript.Invincible == false)
+            if (Arcade.GetKeyDown(playerId, key) && active && meterScript.Invincible == false)
             {
                 Childpos = new Vector3(transform.position.x, 0.64f, transform.position.z);
                 Checkpos = new Vector3(DistanceChild.position.x, 0.64f, DistanceChild.position.z);
@@ -76,7 +76,7 @@ public class NoteChecker : MonoBehaviour
                 active = false;
 
             }
-            else if(Input.GetKeyDown(key) && !active)
+            else if(Arcade.GetKeyDown(playerId, key) && !active)
             {
                 Script.ResetCombo();
                 Script.ResetStreak();
