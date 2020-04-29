@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 5074735505485397063}
   m_Layer: 0
   m_Name: "V\xE4nsterpil"
-  m_TagString: Note
+  m_TagString: LeftNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

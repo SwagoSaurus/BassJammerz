@@ -12,6 +12,8 @@ public class BloomSaver1 : MonoBehaviour
     ScoreScript scoreScript;
     public GameObject BloomTransfer1;
     BloomTransferPlayer1 bloomtransfer1Script;
+    public GameObject WinName;
+    WinNameScript winnameScript;
     public float NewScore;
     public bool PlayerWon;
 
@@ -26,6 +28,7 @@ public class BloomSaver1 : MonoBehaviour
         meterScript = MeterScript.GetComponent<MeterScript>();
         scoreScript = ScoreScript.GetComponent<ScoreScript>();
         bloomtransfer1Script = BloomTransfer1.GetComponent<BloomTransferPlayer1>();
+        winnameScript = WinName.GetComponent<WinNameScript>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class BloomSaver1 : MonoBehaviour
         {
             PlayerWon = true;
             bloomtransfer1Script.NewScore =  scoreScript.Score;
+            bloomtransfer1Script.NewWinName = winnameScript.WinName;
         }
 
     }

@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 1815147988605060037}
   m_Layer: 0
   m_Name: "Upp\xE5tpil"
-  m_TagString: Note
+  m_TagString: UpNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

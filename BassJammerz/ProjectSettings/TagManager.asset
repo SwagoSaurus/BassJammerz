@@ -18,6 +18,10 @@ TagManager:
   - BloomSaver2
   - BloomSaver3
   - BloomSaver4
+  - RightNote
+  - LeftNote
+  - UpNote
+  - DownNote
   layers:
   - Default
   - TransparentFX

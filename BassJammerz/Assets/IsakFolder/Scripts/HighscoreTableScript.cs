@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class HighscoreTableScript : MonoBehaviour
@@ -24,6 +25,8 @@ public class HighscoreTableScript : MonoBehaviour
     HighscoreCheckerScript highscorecheckerScript3;
     public GameObject HighscoreChecker4;
     HighscoreCheckerScript highscorecheckerScript4;
+    public bool NewHS;
+    public bool AddedNew;
 
 
     private void Start()
@@ -82,7 +85,24 @@ public class HighscoreTableScript : MonoBehaviour
         if (highscorecheckerScript1.NewScore > CurrentHighscore || highscores.highscoreEntryList.Count < 10)
         {
             AddHighscoreEntry(highscorecheckerScript1.NewScore, highscorecheckerScript1.Name);
+            //AddedNew = true;
         }
+        if (highscorecheckerScript2.NewScore > CurrentHighscore || highscores.highscoreEntryList.Count < 10)
+        {
+            AddHighscoreEntry(highscorecheckerScript2.NewScore, highscorecheckerScript2.Name);
+            //AddedNew = true;
+        }
+        if (highscorecheckerScript3.NewScore > CurrentHighscore || highscores.highscoreEntryList.Count < 10)
+        {
+            AddHighscoreEntry(highscorecheckerScript3.NewScore, highscorecheckerScript3.Name);
+            //AddedNew = true;
+        }
+        if (highscorecheckerScript4.NewScore > CurrentHighscore || highscores.highscoreEntryList.Count < 10)
+        {
+            AddHighscoreEntry(highscorecheckerScript4.NewScore, highscorecheckerScript4.Name);
+            //AddedNew = true;
+        } 
+        
 
         //sortera listan efter score
         highscores.highscoreEntryList.Sort((x, y) => y.Score.CompareTo(x.Score));
@@ -128,7 +148,7 @@ public class HighscoreTableScript : MonoBehaviour
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
-        float templateHeight = 30f;
+        float templateHeight = 24f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
         entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
@@ -186,9 +206,21 @@ public class HighscoreTableScript : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-   
+    private void Update()
+    {
+        //if (AddedNew)
+        //{
+        //    NewHS = true;
+        //}
 
-    
+        //if (NewHS)
+        //{
+        //    NewHS = false;
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
+    }
+
+
 
     [System.Serializable]
     public class Highscores

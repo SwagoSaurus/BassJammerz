@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ArrowNoteChecker : MonoBehaviour
 {
-	private KeyCode key;
+	private ArcadeButton key;
+	public int playerId;
 	GameObject arrownote;
 	[SerializeField]
 	Transform DistanceChild;
@@ -38,15 +39,15 @@ public class ArrowNoteChecker : MonoBehaviour
 		if (CreateMode)
 		{
 			meterScript.Invincible = true;
-			if (Input.GetKeyDown(key))
+			if (Arcade.GetKeyDown(playerId, key))
 			{
 				Instantiate(N, transform.position, Quaternion.identity);
 			}
 		}
 
-		else if (meterScript.Won == false && meterScript.Lost == false)
+		else if (!meterScript.Won && !meterScript.Lost)
 		{
-			if (Input.GetKeyDown(key) && active && meterScript.Invincible == false)
+			if (Arcade.GetKeyDown(playerId, key) && active && !meterScript.Invincible)
 			{
 				Childpos = new Vector3(transform.position.x, 0.64f, transform.position.z);
 				Checkpos = new Vector3(DistanceChild.position.x, 0.64f, DistanceChild.position.z);
@@ -75,7 +76,7 @@ public class ArrowNoteChecker : MonoBehaviour
 				active = false;
 
 			}
-			else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) && !active)
+			else if (Arcade.GetKeyDown(playerId, ArcadeButton.Right) || Arcade.GetKeyDown(playerId, ArcadeButton.Down) || Arcade.GetKeyDown(playerId, ArcadeButton.Left) || Arcade.GetKeyDown(playerId, ArcadeButton.Right) && !active)
 			{
 				Script.ResetCombo();
 				Script.ResetStreak();
@@ -91,25 +92,25 @@ public class ArrowNoteChecker : MonoBehaviour
 		if (col.gameObject.tag == "LeftNote")
 		{
 			arrownote = col.gameObject;
-			key = KeyCode.LeftArrow;
+			key = ArcadeButton.Left;
 
 		}
 		if (col.gameObject.tag == "RightNote")
 		{
 			arrownote = col.gameObject;
-			key = KeyCode.RightArrow;
+			key = ArcadeButton.Right;
 
 		}
 		if (col.gameObject.tag == "UpNote")
 		{
 			arrownote = col.gameObject;
-			key = KeyCode.UpArrow;
+			key = ArcadeButton.Up;
 
 		}
 		if (col.gameObject.tag == "DownNote")
 		{
 			arrownote = col.gameObject;
-			key = KeyCode.DownArrow;
+			key = ArcadeButton.Down;
 
 		}
 	}

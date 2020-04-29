@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    public GameObject MeterScript;
-    MeterScript meterScript;
     public KeyCode RestartKey;
+    public KeyCode MainScreenKey;
     public float SlowMo;
     public GameObject Player1Needle;
     public GameObject Player2Needle;
@@ -22,7 +21,6 @@ public class SceneManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        meterScript = MeterScript.GetComponent<MeterScript>();
         howmanyplayersScript = HowManyPlayers.GetComponent<HowManyPlayersScript>();
         Time.timeScale = 1.0f;
         SlowMo = 1.0f;
@@ -91,9 +89,13 @@ public class SceneManagerScript : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.H))
+
+        if (Player1Needle.GetComponent<MeterScript>().Won || Player2Needle.GetComponent<MeterScript>().Won || Player3Needle.GetComponent<MeterScript>().Won || Player4Needle.GetComponent<MeterScript>().Won)
         {
-            SceneManager.LoadScene("ChooseSongScene");
+            if (Input.GetKeyDown(MainScreenKey))
+            {
+                SceneManager.LoadScene("ChooseSongScene");
+            }
         }
     }
 }

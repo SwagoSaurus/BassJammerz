@@ -19,12 +19,22 @@ public class UISizeScript : MonoBehaviour
     RestartTextScript restarttextScript;
     public GameObject SceneManagerScript;
     SceneManagerScript scenemanagerScript;
+    public GameObject WinName;
+    WinNameScript winnameScript;
+    public GameObject SameScript;
+    UISizeScript sameScript;
     float TextIncrease;
+    public float TextIncreaseHS;
     float TextIncreaseAll;
+    public bool PrimaryText;
     public bool SecondaryText;
     public bool ThirdText;
     public bool DeathText;
     public bool WinText;
+    public bool HighscoreText;
+    public bool WinNameText;
+    public bool MainScreenText;
+    float HighscoreTimer;
 
     float hej;
     //public Texture2D RawImage2;
@@ -35,6 +45,9 @@ public class UISizeScript : MonoBehaviour
         meterScript = MeterScript.GetComponent<MeterScript>();
         restarttextScript = RestartTextScript.GetComponent<RestartTextScript>();
         scenemanagerScript = SceneManagerScript.GetComponent<SceneManagerScript>();
+        winnameScript = WinName.GetComponent<WinNameScript>();
+        sameScript = SameScript.GetComponent<UISizeScript>();
+        
 
         if (playerscript.Player1Playing == true && playerscript.Player2Playing == true)
         {
@@ -76,6 +89,9 @@ public class UISizeScript : MonoBehaviour
 
         objectRectTransform.localScale = new Vector3(0, 0, 0);
         TextIncrease = 0;
+        TextIncreaseHS = 0;
+        HighscoreText = false;
+        HighscoreTimer = 0;
     }
 
     // Update is called once per frame
@@ -84,22 +100,64 @@ public class UISizeScript : MonoBehaviour
         //hej = hej + 10 ;
         //if (playerscript.Player1Playing == true)
         //    print("Hej");
+        
+
         if( meterScript.Won == true && WinText == true)
         {
-            TextIncrease += 0.01f;
-            if (TextIncrease <= 1 && SecondaryText == false)
+            if (HighscoreText == false && TextIncrease <=2)
+            {
+                TextIncrease += 0.01f;
+            }
+            else if (HighscoreText == true && HighscoreTimer >= 180)
+            {
+                TextIncrease -= 0.01f;
+            }
+
+            if (WinNameText == true)
+            {
+                if (HighscoreTimer >= 300)
+                {
+                    TextIncreaseHS += 0.01f;
+                }
+            }
+
+            if (TextIncrease <= 1 && PrimaryText == true && TextIncrease >= 0)
             {
                 objectRectTransform.localScale = new Vector3(TextIncrease, TextIncrease, TextIncrease);
             }
-            else if (TextIncrease <= 2 && TextIncrease >= 1 & SecondaryText == true)
+            else if (TextIncrease <= 2 && TextIncrease >= 1 && SecondaryText == true && TextIncrease >= 0)
             {
                 objectRectTransform.localScale = new Vector3(TextIncrease - 1, TextIncrease - 1, TextIncrease - 1);
             }
+
+            if(TextIncrease >= 1 && PrimaryText == true && winnameScript.NewNameHighscore == true)
+            {
+                HighscoreText = true;
+            }
+            else if (TextIncrease >= 2 && SecondaryText == true && winnameScript.NewNameHighscore == true)
+            {
+                HighscoreText = true;
+            }
+            else if (sameScript.TextIncrease >= 1 && sameScript.PrimaryText == true && winnameScript.NewNameHighscore == true)
+            {
+                HighscoreText = true;
+            }
+
+            if (TextIncreaseHS <= 1.2 && WinNameText == true && TextIncreaseHS >= 0)
+            {
+                objectRectTransform.localScale = new Vector3(TextIncreaseHS, TextIncreaseHS, TextIncreaseHS);
+            }
+            //En timer innan texten åker bort om man har highscore
+            if(HighscoreText == true)
+            {
+                HighscoreTimer++;
+            }
+            
         }
         if (meterScript.Lost == true && DeathText == true)
         {
             TextIncrease += 0.02f;
-            if (TextIncrease <= 1 && SecondaryText == false && ThirdText == false)
+            if (TextIncrease <= 1 && PrimaryText == true && ThirdText == false)
             {
                 objectRectTransform.localScale = new Vector3(TextIncrease, TextIncrease, TextIncrease);
             }
@@ -109,12 +167,21 @@ public class UISizeScript : MonoBehaviour
             }
             
         }
-        if(scenemanagerScript.Player1Dead == true && scenemanagerScript.Player2Dead == true && scenemanagerScript.Player3Dead == true && scenemanagerScript.Player4Dead == true && DeathText == true && ThirdText == true)
+        if(scenemanagerScript.Player1Dead && scenemanagerScript.Player2Dead && scenemanagerScript.Player3Dead && scenemanagerScript.Player4Dead && DeathText && ThirdText)
         {
             TextIncreaseAll += 0.02f;
-            if (TextIncreaseAll <= 3 && TextIncreaseAll >=2 && SecondaryText == false && ThirdText == true)
+            if (TextIncreaseAll <= 3 && TextIncreaseAll >=2 && PrimaryText == false && SecondaryText == false && ThirdText == true)
             {
                 objectRectTransform.localScale = new Vector3(TextIncreaseAll-2, TextIncreaseAll-2, TextIncreaseAll-2);
+            }
+        }
+
+        if(meterScript.Won && DeathText && ThirdText && MainScreenText)
+        {
+            TextIncreaseAll += 0.02f;
+            if (TextIncreaseAll <= 10 && TextIncreaseAll >= 9 && PrimaryText == false && SecondaryText == false && ThirdText == true)
+            {
+                objectRectTransform.localScale = new Vector3(TextIncreaseAll - 9, TextIncreaseAll - 9, TextIncreaseAll - 9);
             }
         }
     }
