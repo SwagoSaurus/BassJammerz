@@ -1,0 +1,7 @@
+Isak Lagerqvist
+Sebastian Fulke
+Carl Gyllensvan
+Marvin Holm
+Linus Lindberg
+
+BassJammerz är ett trial and error spel där det handlar om att klicka på noter i tid och sync med den valda låt du spelar. Du förväntas inte klara diverse banor på första försöket och därav ser du dig själv förbättras då du, efter ett flertal försök, tar dig längre och längre mot målet av att slutföra låten.

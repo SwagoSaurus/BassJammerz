@@ -87,6 +87,11 @@ public class SceneManagerScript : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
+
+            if(Input.GetKeyDown(MainScreenKey))
+            {
+                SceneManager.LoadScene("ChooseSongScene");
+            }
         }
 
 

@@ -7,6 +7,7 @@ public class PickSongMusicScript : MonoBehaviour
     public AudioClip Song;
     public bool BloomPlay;
     public bool ATGPlay;
+    public bool FunkyPlay;
     //public GameObject OtherSong1;
     //PickSongMusicScript otherSong1;
     float SongPlayCount;
@@ -39,8 +40,12 @@ public class PickSongMusicScript : MonoBehaviour
            
             //PlaySoundInterval(5220, 8160);
         }
+        if(FunkyPlay)
+        {
+            PlaySoundInterval(95f, 145f, 0);
+        }
 
-        if(!ATGPlay && !BloomPlay)
+        if(!ATGPlay && !BloomPlay && !FunkyPlay)
         {
             source.Stop();
             //SongPlayCount = 0;

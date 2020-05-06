@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ArrowNoteChecker : MonoBehaviour
 {
-	private ArcadeButton key;
-	public int playerId;
+	private KeyCode key;
 	GameObject arrownote;
 	[SerializeField]
 	Transform DistanceChild;
@@ -39,7 +38,7 @@ public class ArrowNoteChecker : MonoBehaviour
 		if (CreateMode)
 		{
 			meterScript.Invincible = true;
-			if (Arcade.GetKeyDown(playerId, key))
+			if (Input.GetKeyDown(key))
 			{
 				Instantiate(N, transform.position, Quaternion.identity);
 			}
@@ -47,7 +46,7 @@ public class ArrowNoteChecker : MonoBehaviour
 
 		else if (!meterScript.Won && !meterScript.Lost)
 		{
-			if (Arcade.GetKeyDown(playerId, key) && active && !meterScript.Invincible)
+			if (Input.GetKeyDown(key) && active && !meterScript.Invincible)
 			{
 				Childpos = new Vector3(transform.position.x, 0.64f, transform.position.z);
 				Checkpos = new Vector3(DistanceChild.position.x, 0.64f, DistanceChild.position.z);
@@ -76,7 +75,7 @@ public class ArrowNoteChecker : MonoBehaviour
 				active = false;
 
 			}
-			else if (Arcade.GetKeyDown(playerId, ArcadeButton.Right) || Arcade.GetKeyDown(playerId, ArcadeButton.Down) || Arcade.GetKeyDown(playerId, ArcadeButton.Left) || Arcade.GetKeyDown(playerId, ArcadeButton.Right) && !active)
+			else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.W) && !active)
 			{
 				Script.ResetCombo();
 				Script.ResetStreak();
@@ -92,25 +91,25 @@ public class ArrowNoteChecker : MonoBehaviour
 		if (col.gameObject.tag == "LeftNote")
 		{
 			arrownote = col.gameObject;
-			key = ArcadeButton.Left;
+			key = KeyCode.A;
 
 		}
 		if (col.gameObject.tag == "RightNote")
 		{
 			arrownote = col.gameObject;
-			key = ArcadeButton.Right;
+			key = KeyCode.D;
 
 		}
 		if (col.gameObject.tag == "UpNote")
 		{
 			arrownote = col.gameObject;
-			key = ArcadeButton.Up;
+			key = KeyCode.W;
 
 		}
 		if (col.gameObject.tag == "DownNote")
 		{
 			arrownote = col.gameObject;
-			key = ArcadeButton.Down;
+			key = KeyCode.S;
 
 		}
 	}

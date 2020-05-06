@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/IsakFolder/Scenes/Test2.unity
     guid: 9019fb970817d8a409b3417edc297de6
+  - enabled: 1
+    path: Assets/IsakFolder/Scenes/ATG.unity
+    guid: dd8f6bb14a4b51b4a94f3671eb627a16
   m_configObjects: {}

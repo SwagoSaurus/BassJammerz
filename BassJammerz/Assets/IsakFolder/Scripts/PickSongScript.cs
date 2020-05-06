@@ -10,8 +10,8 @@ public class PickSongScript : MonoBehaviour
     public KeyCode Play;
     public bool Bloom;
     public bool ATG;
-    public bool Test1;
-    public bool Test2;
+    public bool FunkyFun;
+    //public bool Test2;
     public string SceneName;
     public RectTransform textTransform;
     public RectTransform Test1Transform;
@@ -40,14 +40,14 @@ public class PickSongScript : MonoBehaviour
         {
             SceneName = "Bloom";
         }
-        else if(Test1 == true)
+        else if(ATG == true)
         {
-            SceneName = "Test1";
+            SceneName = "ATG";
         }
-        else if(Test2 == true)
-        {
-            SceneName = "Test2";
-        }
+        //else if(Test2 == true)
+        //{
+        //    SceneName = "Test2";
+        //}
 
     }
     void Start()
@@ -73,7 +73,7 @@ public class PickSongScript : MonoBehaviour
 
             if (PositionNr < NumberOfSongsOverMid)
             {
-            if (Input.GetKeyDown(Up))
+            if (Input.GetKeyDown(Down))
             {
                 PositionNr += 1;
                 PressPos = textTransform.anchoredPosition;
@@ -84,7 +84,7 @@ public class PickSongScript : MonoBehaviour
             }
             if (PositionNr > -NumberOfSongsUnderMid)
             {
-            if (Input.GetKeyDown(Down))
+            if (Input.GetKeyDown(Up))
             {
                 PositionNr -= 1;
                 PressPos = textTransform.anchoredPosition;
@@ -124,6 +124,9 @@ public class PickSongScript : MonoBehaviour
             if (ATG)
                 picksongmusicScript.ATGPlay = true;
 
+            if (FunkyFun)
+                picksongmusicScript.FunkyPlay = true;
+
         }
         else
         {
@@ -133,6 +136,9 @@ public class PickSongScript : MonoBehaviour
 
             if (ATG)
                 picksongmusicScript.ATGPlay = false;
+
+            if (FunkyFun)
+                picksongmusicScript.FunkyPlay = false;
         }
         //Debug.Log(TopText.anchoredPosition.y);
         //Debug.Log(BottomText.anchoredPosition.y);

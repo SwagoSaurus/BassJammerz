@@ -23,20 +23,21 @@ public class UISizeScript : MonoBehaviour
     WinNameScript winnameScript;
     public GameObject SameScript;
     UISizeScript sameScript;
+    public GameObject MainScreenTextSize;
+    RestartTextScript mainScreenTextScript;
     float TextIncrease;
     public float TextIncreaseHS;
     float TextIncreaseAll;
     public bool PrimaryText;
     public bool SecondaryText;
     public bool ThirdText;
+    public bool RestartText;
     public bool DeathText;
     public bool WinText;
     public bool HighscoreText;
     public bool WinNameText;
     public bool MainScreenText;
     float HighscoreTimer;
-
-    float hej;
     //public Texture2D RawImage2;
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class UISizeScript : MonoBehaviour
         playerscript = Playerscript.GetComponent<HowManyPlayersScript>();
         meterScript = MeterScript.GetComponent<MeterScript>();
         restarttextScript = RestartTextScript.GetComponent<RestartTextScript>();
+        mainScreenTextScript = MainScreenTextSize.GetComponent<RestartTextScript>();
         scenemanagerScript = SceneManagerScript.GetComponent<SceneManagerScript>();
         winnameScript = WinName.GetComponent<WinNameScript>();
         sameScript = SameScript.GetComponent<UISizeScript>();
@@ -53,36 +55,43 @@ public class UISizeScript : MonoBehaviour
         {
             ChangeTextSize(0.5f);
             restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else if (playerscript.Player1Playing == true && playerscript.Player3Playing == true)
         {
             ChangeTextSize(0.5f);
-            restarttextScript.TextSize(0.5f);
+            restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else if (playerscript.Player1Playing == true && playerscript.Player4Playing == true)
         {
             ChangeTextSize(0.5f);
-            restarttextScript.TextSize(0.5f);
+            restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else if (playerscript.Player2Playing == true && playerscript.Player3Playing == true)
         {
             ChangeTextSize(0.5f);
-            restarttextScript.TextSize(0.5f);
+            restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else if (playerscript.Player2Playing == true && playerscript.Player4Playing == true)
         {
             ChangeTextSize(0.5f);
-            restarttextScript.TextSize(0.5f);
+            restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else if (playerscript.Player3Playing == true && playerscript.Player4Playing == true)
         {
             ChangeTextSize(0.5f);
-            restarttextScript.TextSize(0.5f);
+            restarttextScript.TextSize(0.9f);
+            mainScreenTextScript.TextSize(0.9f);
         }
         else
         {
             ChangeTextSize(1);
             restarttextScript.TextSize(1);
+            mainScreenTextScript.TextSize(1);
         }
 
        

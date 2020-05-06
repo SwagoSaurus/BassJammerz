@@ -7,6 +7,7 @@ using TMPro;
 public class RestartTextScript : MonoBehaviour
 {
     public TextMeshProUGUI txt;
+    public TextMeshProUGUI txtOG;
     public GameObject SceneManagerScript;
     SceneManagerScript scenemanagerscript;
     public bool RestartText;
@@ -16,7 +17,7 @@ public class RestartTextScript : MonoBehaviour
     void Start()
     {
         scenemanagerscript = SceneManagerScript.GetComponent<SceneManagerScript>();
-        
+        txtOG = txt;
         
     }
 
@@ -35,6 +36,6 @@ public class RestartTextScript : MonoBehaviour
     }
     public void TextSize(float size)
     {
-        txt.fontSize = txt.fontSize * size;
+        txt.fontSize = txtOG.fontSize * size;
     }
 }

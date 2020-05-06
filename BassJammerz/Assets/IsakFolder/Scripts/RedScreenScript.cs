@@ -11,7 +11,7 @@ public class RedScreenScript : MonoBehaviour
     void Start()
     {
         meterScript = MeterScript.GetComponent<MeterScript>();
-        Red.anchoredPosition = new Vector3(1000, 1000, 1000);
+        Red.anchoredPosition = new Vector3(1000, 1500, 1000);
     }
 
     // Update is called once per frame

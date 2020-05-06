@@ -8,10 +8,10 @@ public class HowManyPlayersScript : MonoBehaviour
     public Camera Player2;
     public Camera Player3;
     public Camera Player4;
-    public bool Player1Playing;
-    public bool Player2Playing;
-    public bool Player3Playing;
-    public bool Player4Playing;
+    public bool Player1Playing = false;
+    public bool Player2Playing = false;
+    public bool Player3Playing = false;
+    public bool Player4Playing = false;
     // Start is called before the first frame update
     void Start()
     {
